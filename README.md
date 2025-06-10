@@ -35,13 +35,17 @@ npm install
 
 2. 環境変数を設定する方法（以下のいずれか）：
 
-   **方法1: Cloudflareダッシュボードで設定（推奨）**
+   **方法1: Cloudflareダッシュボードで設定（本番環境では必須）**
    - Workers & Pages → 該当のWorker → 設定 → 環境変数
+   - 「変数を追加」をクリック
    - 変数名: `ACCOUNT_HASH`
-   - 値: あなたのアカウントハッシュ
+   - 値: あなたのアカウントハッシュ（例：`ZWd9g1K7eljCn_KDTu_MWA`）
+   - 「保存」をクリック
 
    **方法2: wrangler.jsoncで設定（開発用）**
    - `wrangler.jsonc`の`vars`セクションで`YOUR_ACCOUNT_HASH`を実際の値に置き換える
+   
+   ⚠️ **重要**: デプロイ後に環境変数が設定されていない場合、エラーメッセージが表示されます。必ずCloudflareダッシュボードで`ACCOUNT_HASH`を設定してください。
 
 ### デプロイ
 
