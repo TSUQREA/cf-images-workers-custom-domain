@@ -1,7 +1,7 @@
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
 		// You can find this in the dashboard, it should look something like this: ZWd9g1K7eljCn_KDTu_MWA
-		const accountHash = env.account_hash;
+		const accountHash = env.ACCOUNT_HASH;
 
 		const { pathname } = new URL(request.url);
 
